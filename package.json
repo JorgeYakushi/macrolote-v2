@@ -1,5 +1,5 @@
 {
-  "name": "macrolote-client",
+  "name": "macrolote-v2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run macrolote-client:serve-ssr",
-    "serve:ssr": "node dist/macrolote-client/server/main.js",
-    "build:ssr": "ng build --prod && ng run macrolote-client:server:production",
-    "prerender": "ng run macrolote-client:prerender"
+    "dev:ssr": "ng run macrolote-v2:serve-ssr",
+    "serve:ssr": "node dist/macrolote-v2/server/main.js",
+    "build:ssr": "ng build --prod && ng run macrolote-v2:server:production",
+    "prerender": "ng run macrolote-v2:prerender"
   },
   "private": true,
   "dependencies": {
