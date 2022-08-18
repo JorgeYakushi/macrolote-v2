@@ -1,0 +1,35 @@
+<!-- <div class="container-fullwidth" *ngFor="let item of singleproject">
+    <div class="column-40">
+        <div class="container-box">
+            <h3 class="title">¡Estamos aquí!</h3>
+            <p class="subtitle">Ubicado estratégicamente en el <b>distrito de {{item.name}}.</b></p>
+            <ul *ngFor="let list of item.list">
+                <li><img src="assets/images/icons/check.svg" class="list">{{ list.name }}</li>
+            </ul>
+            <button class="button__main">Contáctanos <img src="assets/images/icons/arrow-button.svg" alt=""></button>
+        </div>
+    </div>
+    <div class="column-60 green">
+        <div class="container-map">
+
+        </div>
+    </div>
+</div> -->
+<div class="container-fullwidth db">
+    <div class="column-40">
+        <div class="container-box" >
+            <h3 class="title">¡Estamos aquí!</h3>
+            <p class="subtitle">Ubicado estratégicamente en el <b>distrito de {{ districtName }}</b></p>
+            <ul *ngFor="let list of listFeatures">
+                <li><img src="assets/images/icons/check.svg" class="list"> {{ list }}</li>
+            </ul>
+            <a href="contacto" class="button__main">Contáctanos <img src="assets/images/icons/arrow-button.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="column-60 green" style="display: flex;">
+        <div class="container-map">
+            <!-- <iframe [src]="urlSafe" class="maps" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            <div id="map" class="maps"></div>
+        </div>
+    </div>
+</div>

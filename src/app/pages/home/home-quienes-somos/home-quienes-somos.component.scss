@@ -1,0 +1,26 @@
+.padding_container {
+    padding: 4em 0;
+    text-align: center;
+    margin: auto;
+  }
+  @media (max-width:1024px){
+    .padding_container{
+      .column-1{
+        padding: 0px;
+        .container__info{
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+  @media (max-width:767px){
+    .padding_container{
+      padding: 64px 0px 47px;
+      .container__info{
+        padding-bottom: 32px !important;
+      }
+      .button__main{
+        display: none;
+      }
+    }
+  }

@@ -1,0 +1,20 @@
+<section class="section_header container-fullwidth section__one">
+  <app-terrain-header style="width: 100%"></app-terrain-header>
+</section>
+<section class="section_box_cards">
+  <app-terrain-cards-box class="filters"></app-terrain-cards-box>
+</section>
+<section
+  class="infobox"
+  [style]="
+    'background-image: url(' +
+    blobUrl +
+    '/terrenos/san_antonio/san-antonio-1.jpg)'
+  "
+>
+  <div class="overlay"></div>
+  <app-terrain-info-card></app-terrain-info-card>
+</section>
+<section>
+  <app-terrain-contact></app-terrain-contact>
+</section>

@@ -1,0 +1,205 @@
+.slider {
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: absolute;
+}
+.minheight {
+  height: calc(100vh - 80px);
+  flex-wrap: wrap;
+  .text__description {
+    background-color: rgba(12, 209, 181, 0.8);
+    max-width: 535px;
+    width: 535px;
+    min-height: 243.59px;
+    margin: auto 0;
+    text-align: left;
+    padding: 35px;
+    color: #000;
+    h1 {
+      margin-bottom: 0.8em;
+    }
+  }
+  .column-2_custom:nth-child(1) {
+    width: auto;
+    margin: auto 0;
+  }
+  .column-2_custom:nth-child(2) {
+    margin: auto 0 auto auto;
+  }
+  .scrollResponsive {
+    display: none;
+  }
+  .scrollDesktop {
+    display: block;
+    max-width: 220px;
+    margin: auto;
+  }
+  .container__scroll {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      background-color: #fff;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.text__cta {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 30px 35px 0;
+  max-width: 370px;
+  display: flex;
+  margin: auto auto auto 0;
+  color: #fff;
+  img {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .minheight {
+    height: 100%;
+    .scrollResponsive {
+      display: block;
+      padding: 0px !important;
+      .container__scroll {
+        margin-top: -200px;
+        width: 100%;
+        max-width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .scrollDesktop {
+      display: none;
+    }
+  }
+  .container {
+    .column-2_custom:nth-child(1) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: calc(50vh - 295px);
+      margin-bottom: calc(50vh - 39px);
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 0 15px !important;
+      .text__description {
+        min-height: inherit !important;
+        height: auto;
+        text-align: center;
+        margin: auto auto 0 auto;
+        padding: 30px;
+      }
+      .text__cta {
+        justify-content: space-between;
+        padding: 30px 28px 0;
+        margin: 0 auto auto auto;
+      }
+    }
+    .column-2_custom {
+      margin-top: 0px;
+      padding: 0 15px 28px !important;
+    }
+    .text__descrition {
+      margin: auto;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    height: calc(100vh - 95px);
+  }
+  .minheight {
+    display: flex;
+    .column-2_custom:nth-child(1) {
+      display: flex;
+      width: auto;
+      flex-wrap: wrap;
+      text-align: center;
+      position: relative;
+      &.hero-text-0{
+        margin-bottom: calc(50vh - 75px);
+      }
+      &.hero-text-1{
+        margin-bottom: calc(50vh - 197px);
+      }
+      &.hero-text-2{
+        margin-bottom: calc(50vh - 46px);
+      }
+      .text__description {
+        text-align: center;
+        margin: auto auto 0 auto;
+        width: 100%;
+        padding: 25px;
+      }
+      .text__cta {
+        justify-content: space-between;
+        padding: 0px;
+        margin-top: 30px;
+        text-align: center;
+        width: auto;
+      }
+    }
+    .column-2_custom {
+      padding-top: 30px !important;
+      padding: 0 15px;
+    }
+    .scrollResponsive {
+      display: block;
+      .container__scroll {
+        margin-top: -120px;
+      }
+    }
+    .scrollDesktop {
+      display: none;
+    }
+  }
+}
+@media (max-width: 330px) {
+  .minheight {
+    .column-2_custom:nth-child(1) {
+      margin-top: calc(50vh - 275px);
+      margin-bottom: calc(50vh - 151px);
+      &.hero-text-0{
+        margin-bottom: calc(50vh - 83px);
+      }
+      &.hero-text-1{
+        margin-bottom: calc(50vh - 131px);
+      }
+      &.hero-text-2{
+        margin-bottom: calc(50vh - 39px);
+      }
+      .text__description {
+        max-height: 260px;
+        min-height: auto;
+        padding: 30px;
+      }
+      .text__cta {
+        font-size: 14px;
+      }
+    }
+    .scrollResponsive {
+      .container__scroll {
+        margin-top: -100px;
+      }
+    }
+  }
+}
+@media (min-width: 1350px) {
+  .minheight {
+    .container__scroll {
+      margin-top: -120px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="content_select">
+    <img src="assets/images/icons/select_boton.svg" alt="" />
+    <p>Distrito:</p>
+    <select [(ngModel)]="districtId" (ngModelChange)="districtChange()">
+      <option [ngValue]="0" selected>Todos</option>
+      <option [ngValue]="1">San Antonio</option>
+      <option [ngValue]="2">Huacho</option>
+      <option [ngValue]="3">Santiago de Surco</option>
+      <option [ngValue]="4">San Isidro</option>
+      <option [ngValue]="5">Lurín</option>
+    </select>
+  </div>
+  <div class="project_container">
+    <p>Listado de <b>Terrenos y propiedades:</b></p>
+  </div>
+</div>
+<div class="info__container__terrain">
+  <app-terrain-card
+    [ifSlider]="ifSlider"
+    [ifSliderIMG]="ifSliderIMG"
+  ></app-terrain-card>
+</div>

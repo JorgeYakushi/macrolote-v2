@@ -1,0 +1,225 @@
+.banner{
+    .banner-detail-project{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        background-color: #181d20;
+        height: 342px;
+    }
+    .slider-img{
+        padding-top: 50px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+}
+.terrain-detail{
+    .swiper-slide{
+        position: relative;
+        bottom: -80px;
+        & .carousel__image__container{
+            padding: 0px;
+        }
+    }
+    .swiper-slide-active{
+        bottom: 0px;
+        & .carousel__image__container{
+            padding: 20px !important;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 400px;
+            background-color: #000;
+            z-index: -1;
+            left: 5%;
+            bottom: 13%;
+            box-shadow: 0 0 18px 15px rgb(0 0 0 / 80%);
+            border-radius: 110px;
+        }
+        &:after{
+            content: "";
+            width: calc(100% - 40px);
+            height: calc(100% - 25px);
+            display: block;
+            position: absolute;
+            top: 0px;
+            background: linear-gradient(0deg, rgb(24 29 32 / 80%) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 0%);
+        }
+    } 
+    }
+    .swiper-slide-prev:after, .swiper-slide-next::after{
+            content: "";
+            width: 100%;
+            height: calc(100% - 7px);
+            display: block;
+            position: absolute;
+            top: 0px;
+            background: linear-gradient(0deg, #181d20 0%, hsl(203deg 14% 11% / 50%) 30%, rgb(24 29 32 / 50%) 0%);;
+    }
+    ::ng-deep .swiper-button-next, ::ng-deep .swiper-button-prev{
+        top: 92.8% !important;
+        height: 17px !important;
+        width: 7px !important;
+        color: #d42e12 !important;
+        }
+    ::ng-deep .swiper-pagination-bullets{
+        bottom: 31px !important;
+    }
+    ::ng-deep .swiper-pagination-bullet{
+        border: none !important;
+        width: 13px !important;
+        height: 13px !important;
+        background-color: #ebecef !important;
+        opacity: 1 !important;
+    }
+    ::ng-deep .swiper-pagination-bullet-active{
+        background-color: #d42e12 !important;
+    }
+    ::ng-deep .swiper-button-next::after, ::ng-deep .swiper-button-prev::after{
+        font-size: 17px !important;
+        font-weight: bold !important;
+    }
+    ::ng-deep .swiper-button-prev{
+        left: 40% !important;
+    }
+    ::ng-deep .swiper-button-next{
+        right: 40% !important;
+    }
+}
+@media (max-width:1024px){
+    .banner{
+        .banner-detail-project{
+            img{
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+        .slider-img{
+            padding-top: 50px;
+            position: relative;
+            img{
+                height: 350px;
+            }
+        }
+    }
+    .terrain-detail{
+        .swiper-slide{
+            position: relative;
+            bottom: -80px;
+            & .carousel__image__container{
+                padding: 0px;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                width: 90%;
+                height: 260px;
+                background-color: #000;
+                z-index: -1;
+                left: 5%;
+                bottom: 13%;
+                box-shadow: 0 0 20px 2px rgb(0 0 0 / 80%);
+                border-radius: 50px;
+            }
+            
+        }
+        .swiper-slide-active{
+            bottom: 0px;
+            & .carousel__image__container{
+                padding: 20px;
+            }
+            img{
+                height: 450px;
+            }
+        }
+        ::ng-deep .swiper-button-next, ::ng-deep .swiper-button-prev{
+            top: 92% !important;
+        }
+        ::ng-deep .swiper-pagination-bullets{
+            bottom: 35px !important;
+        }
+        ::ng-deep .swiper-button-prev{
+            left: 35% !important;
+        }
+        ::ng-deep .swiper-button-next{
+            right: 35% !important;
+        }
+    }
+    
+}
+@media (max-width:767px){
+    .banner{
+        .banner-detail-project{
+            height: 470px;
+            img{
+                width: 100%;
+                height: 470px;
+                object-fit: cover;
+            }
+        }
+        .slider-img{
+            padding-top: 120px;
+            position: relative;
+            img{
+                height: 252px;
+            }
+        }
+    }
+    .terrain-detail{
+        .swiper-slide{
+            position: relative;
+            bottom: 0px;
+            &:before{
+                bottom: 30%;
+            }
+        }
+        .swiper-slide-active .carousel__image__container{
+            padding:0 0 70px 0 !important;
+            &:before{
+                display: none;
+            }
+        }
+        ::ng-deep .swiper-pagination-bullets{
+            bottom: 20px !important;
+        }
+        ::ng-deep .swiper-button-prev{
+            left: 20% !important;
+        }
+        ::ng-deep .swiper-button-next{
+            right: 20% !important;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width:1023px){
+    .terrain-detail{
+        .swiper-slide-active{
+            width: 600px !important;
+            margin-left: -115px;
+        }
+    }
+}
+@media (min-width: 1024px) and (max-width:1366px){
+    .terrain-detail{
+        .swiper-slide-active{
+        width: 700px !important;
+        margin-left: -107px;
+        }
+    }
+}
+@media (min-width:1367px){
+    .terrain-detail{
+        .swiper-slide-active{
+            width: 800px !important;
+            margin-left: -90px;
+            margin-top: -32px;
+            img{
+                height: 500px;
+            }
+        }
+    }
+}

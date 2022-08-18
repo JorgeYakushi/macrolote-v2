@@ -1,0 +1,177 @@
+@import "src/app/shared/styles/variables";
+
+.nuestro-equipo__container {
+  .nuestro-equipo__content {
+    z-index: 1;
+    width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/images/quienes-somos/nuestroequipo-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .nuestro-equipo__title {
+      p {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.29;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: white;
+      }
+      margin-top: 20px;
+    }
+
+    .nuestro-equipo__subtitle {
+      p {
+        font-size: 20px;
+        color: $color--main;
+        text-align: center;
+      }
+      margin-top: 15px;
+      margin-bottom: 50px;
+    }
+
+    .nuestro-equipo__cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 24px 20px 24px;
+        height: 360px;
+        width: 280px;
+
+        img {
+          position: absolute;
+          width: 280px;
+          height: 361px;
+        }
+
+        .card-name {
+          z-index: 2;
+          transform: translateY(250px);
+          text-align: center;
+          display: flex;
+          align-items: center;
+          width: 248px;
+          padding: 0 40px 0 40px;
+
+          p {
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 1.22;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .flex__center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      z-index: 1;
+
+      .contact__button {
+        z-index: 1;
+        display: block;
+        width: 270px;
+        height: 55px;
+        border-radius: 27px;
+        padding: 17px 30px 17px 60px;
+        background-color: $color--main;
+        border: none;
+        box-shadow: $shadow--main;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+
+        cursor: pointer;
+        p {
+          width: 150px;
+          height: 20px;
+          font-family: "Montserrat";
+          font-size: 15px;
+          font-weight: 600;
+          color: white;
+          text-align: center;
+        }
+
+        .arrow {
+          width: 20px;
+          height: 12px;
+          margin: 0 0 8px 0px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .nuestro-equipo__container {
+    .nuestro-equipo__content {
+      padding: 60px 0 60px 0;
+
+      .nuestro-equipo__title {
+        p {
+          font-size: 34px;
+          line-height: 0.91;
+          letter-spacing: 0.43px;
+        }
+      }
+  
+      .nuestro-equipo__subtitle {
+        p {
+          font-size: 24px;
+        }
+      }
+  
+      .nuestro-equipo__cards {
+        flex-direction: row;
+        justify-content: center;
+  
+        .card {
+          margin-bottom: 0;
+          height: 360px;
+          width: 280px;
+  
+          img {
+
+          }
+  
+          .card-name {
+  
+            p {
+
+            }
+          }
+        }
+      }
+  
+      .flex__center {
+  
+        .contact__button {
+  
+          p {
+
+          }
+  
+          .arrow {
+
+          }
+        }
+      }
+    }
+  }
+}

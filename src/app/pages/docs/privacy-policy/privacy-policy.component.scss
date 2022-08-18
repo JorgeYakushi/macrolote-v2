@@ -1,0 +1,87 @@
+@import "../../../shared/styles/variables";
+.doc__container {
+  margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-weight: 700;
+    line-height: 1;
+  }
+  .doc__logo {
+    padding: 16px 0;
+    img {
+      height: 58px;
+    }
+  }
+  .doc__header {
+    padding: 16px 2em;
+    background-color: $color--main;
+    color: white;
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .doc__content {
+    padding: 2em 0.5em;
+    max-width: 900px;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 500;
+    ol,
+    ul {
+      padding-left: 2.5em;
+    }
+    li {
+      padding-left: 2.5em;
+    }
+    table {
+      width: 100%;
+      tr {
+        td:first-child {
+          display: flex;
+          width: auto;
+          min-width: auto;
+          text-align: left;
+          padding-right: 8px;
+        }
+        td:not(:first-child) {
+          padding-bottom: 2em;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .doc__container {
+    margin-top: 80px;
+    .doc__content {
+      padding: 2em 0;
+      table {
+        tr {
+          td:first-child {
+            min-width: 250px;
+          }
+          td:not(:first-child) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .doc__header {
+      padding: 24px 0;
+      h2 {
+        font-size: 25px;
+      }
+    }
+    .doc__logo {
+      padding: 24px 0;
+      img {
+        height: 73px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "/visor/*": {
+    "target": "http://localhost:8899",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/visor": "http://localhost:8899/visor"
+    }
+  }
+}

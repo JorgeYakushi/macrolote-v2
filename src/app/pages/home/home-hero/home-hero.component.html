@@ -1,0 +1,39 @@
+<app-slider-main
+  class="slider"
+  (indexChange)="indexChange($event)"
+></app-slider-main>
+<div class="container minheight">
+  <div class="column-2_custom z-index1" [ngClass]="'hero-text-' + index">
+    <div class="text__description">
+      <h1>
+        {{ heroText[index].titulo }}
+      </h1>
+      <h2>{{ heroText[index].subtitulo }}</h2>
+    </div>
+    <a href="/terrenos" class="text__cta">
+      Conoce nuestros macrolotes
+      <img src="assets/images/icons/arrow-button.svg" alt=""
+    /></a>
+  </div>
+  <div class="column-1 z-index1 scrollResponsive">
+    <div class="container__scroll">
+      <button (click)="sectionScrollRes()">
+        <img src="assets/images/icons/scroll-down.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="column-2_custom z-index1 form-withe" id="form">
+    <app-form
+      id="first__form"
+      class="form__hidden"
+      [formHome]="true"
+    ></app-form>
+  </div>
+  <div class="column-1 z-index1 scrollDesktop">
+    <div class="container__scroll">
+      <button (click)="sectionScroll()">
+        <img src="assets/images/icons/scroll-down.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</div>

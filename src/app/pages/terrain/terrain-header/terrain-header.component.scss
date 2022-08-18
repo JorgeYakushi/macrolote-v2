@@ -1,0 +1,194 @@
+@import "../../../shared/styles/variables";
+.container {
+  margin-top: 30px;
+  .text__description {
+    background-color: rgba(12, 209, 181, 0.8);
+    max-width: 504px;
+    margin: auto;
+    text-align: left;
+    padding: 45px 35px;
+    color: #000;
+    z-index: 1;
+    h1 {
+      margin-bottom: 0.8em;
+      font-size: 30px;
+      line-height: 39px;
+      letter-spacing: 0.37px;
+    }
+    h2{
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: 0.25px;
+    }
+  }
+  .text__cta{
+      font-size: 17px;
+      font-weight: 600;
+      padding: 30px 35px 0;
+      max-width: 535px;
+      display: flex;
+      margin: auto;
+      color: #fff;
+      img{
+        margin-left: 15px;
+      }
+    }
+  .column-2_custom:nth-child(1){
+      width: auto;
+      margin: auto 0;
+  }
+  .column-2_custom:nth-child(2){
+      margin: 0 0 auto auto;
+  }
+  .container_slider{
+      max-width: 576px;
+      max-height: 427px;
+      position: relative;
+      margin-bottom: -200px;
+      ::ng-deep .p-absolute{
+        position: relative;
+      }
+      ::ng-deep .carousel__image__container{
+        ::ng-deep img{
+          height: 427px !important;
+        }
+        &::after{
+          height: 427px !important;
+        }
+      }
+      ::ng-deep .minheight_content{
+        display: none !important;
+      }
+      ::ng-deep .swiper-button-prev{
+        left: 35% !important;
+      }
+      ::ng-deep .swiper-button-next{
+        right: 35% !important;
+      }
+      ::ng-deep .swiper-pagination-bullets{
+        bottom: 2.5% !important;
+      }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px){
+  .container{
+    .text__description {
+      padding: 20px;
+      h1 {
+        font-size: 26px;
+      }
+      h2{
+        font-size: 18px;
+      }
+    }
+    .column-2_custom{
+      width: 50%;
+      padding: 15px;
+    }
+    .column-2_custom:nth-child(2){
+      margin: auto;
+      .container_slider{
+        height: 380px;
+        width: 100%;
+        margin-bottom: -100px;
+        ::ng-deep .carousel__image__container{
+          ::ng-deep img{
+            height: 380px !important;
+          }
+          &::after{
+            height: 380px !important;
+          }
+        }
+        ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+          top: 96.5% !important;
+        }
+        ::ng-deep .swiper-button-prev{
+          left: 25% !important;
+        }
+        ::ng-deep .swiper-button-next{
+          right: 25% !important;
+        }
+        ::ng-deep .swiper-pagination-bullets{
+          bottom: 2% !important;
+        }
+      }
+  }
+  }
+}
+@media (max-width: 767px) {
+  .container{
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-top: 80px;
+    z-index: 1;
+    .text__description {
+      background-color: rgba(12, 209, 181, 0.8);
+      max-width: 100%;
+      margin: auto auto;
+      text-align: left;
+      padding: 24px 18px 31px;
+      color: #000;
+      z-index: 1;
+      h1{
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.21;
+        letter-spacing: 0.3px;
+      }
+    }
+    .text__cta{
+      font-size: 17px;
+      font-weight: 600;
+      padding: 30px 0;
+      justify-content: center;
+      max-width: 100%;
+      display: flex;
+      color: #fff;
+      img{
+        margin-left: 25px;
+      }
+    }
+    .column-2_custom{
+      z-index: 9;
+    }
+    .column-2_custom:nth-child(1){
+      width: auto;
+      margin: auto 0;
+      width: 100%;
+      padding: 0px 15px;
+    }
+    .column-2_custom:nth-child(2){
+        margin: auto;
+        width: 100%;
+        .container_slider{
+          height: 300px;
+          width: 100%;
+          margin-top: -40px;
+          margin: auto;
+          ::ng-deep .slider__container{
+            height: 100% !important;
+          }
+          ::ng-deep .carousel__image__container{
+            ::ng-deep img{
+              height: 300px !important;
+              padding-bottom: 50px;
+            }
+            &::after{
+              height: 250px !important;
+            }
+          }
+          ::ng-deep .swiper-button-prev{
+            left: 25% !important;
+          }
+          ::ng-deep .swiper-button-next{
+            right: 25% !important;
+          }
+          ::ng-deep .swiper-pagination-bullets{
+            bottom: 2% !important;
+          }
+        }
+    }
+  }
+}

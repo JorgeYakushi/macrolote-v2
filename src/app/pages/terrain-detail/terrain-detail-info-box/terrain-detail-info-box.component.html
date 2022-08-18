@@ -1,0 +1,48 @@
+<div
+  class="second__section bg-picture"
+  [style]="
+    'background-image: url(' +
+    blobUrl +
+    '/terrenos/san_antonio/san-antonio-1.jpg)'
+  "
+  id="section-2"
+>
+  <div class="overlay"></div>
+  <div class="info__container">
+    <h1 class="t-white">¡Conoce más sobre este macrolote!</h1>
+    <h3>Centenario, solo si quieres lo mejor</h3>
+    <div class="cta__container">
+      <div class="cta__content" id="cta__items">
+        <div class="cta__item">
+          <div class="cta__empty"></div>
+          <div class="cta__square black">
+            <img src="assets/images/projects/residency.svg" alt="" />
+            <p>
+              Zonificación: <b>{{ terrainData.description.zonificacion }}</b>
+            </p>
+          </div>
+        </div>
+        <div class="cta__item">
+          <div class="cta__square green">
+            <img src="assets/images/projects/projects.svg" alt="" />
+            <p>
+              Tipos de usos:<br />
+              <b>{{ terrainData.description.tipouso }}</b>
+            </p>
+          </div>
+          <div class="cta__empty"></div>
+        </div>
+        <div class="cta__item">
+          <div class="cta__empty"></div>
+          <div class="cta__square black">
+            <img src="assets/images/projects/percent.svg" alt="" />
+            <p>
+              Lote <b>{{ terrainData.description.porcentaje }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="contacto" class="button__main">Contáctanos <img src="assets/images/icons/arrow-button.svg" alt=""></a>
+  </div>
+</div>

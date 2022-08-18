@@ -1,0 +1,149 @@
+<div
+  class="form__container"
+  [ngClass]="{
+    'form__contact-us': formContactUs,
+    form__home: formHome,
+    form__contact: formContact
+  }"
+>
+  <form [formGroup]="formGroup">
+    <h2 *ngIf="formContactUs" class="form__header">
+      Encuentra el Macrolote ideal aquí
+    </h2>
+    <h2 *ngIf="formHome" class="form__header">
+      Encuentra el Macrolote ideal aquí
+    </h2>
+    <h2 *ngIf="formContact" class="form__header">Contáctanos</h2>
+    <h2 *ngIf="formContact" class="form__subtitle">
+      Encuentra el Macrolote ideal aquí
+    </h2>
+    <div class="input__container">
+      <div class="form__item" *ngFor="let item of inputControls">
+        <input
+          class="form__input"
+          type="text"
+          [formControlName]="item.name"
+          [attr.disabled]="loading ? '' : null"
+          [ngClass]="{
+            'form__input--empty': isSubmitted && f[item.name].errors?.required,
+            'form__input--invalid': isSubmitted && f[item.name].errors?.pattern
+          }"
+          [maxLength]="item.maxNumber ? item.maxNumber : 255"
+          (keypress)="item.maxNumber && onKeyPressNumber($event)"
+        />
+        <label
+          [for]="item.name"
+          class="form__floating__text"
+          [ngClass]="{
+            'form__floating__text--floating': f[item.name].value != ''
+          }"
+          >{{ item.placeholder }}</label
+        >
+        <img
+          class="item__alert"
+          [ngClass]="{
+            'item__alert--invalid':
+              isSubmitted &&
+              (f[item.name].errors?.required || f[item.name].errors?.pattern)
+          }"
+          src="assets/images/icons/alert.svg"
+          alt=""
+        />
+      </div>
+      <div class="form__item">
+        <select
+          class="form__input form__select"
+          formControlName="landOfInterestId"
+          [attr.disabled]="loading ? '' : null"
+          [ngClass]="{
+            'form__input--empty': isSubmitted && f.landOfInterestId.value === 0
+          }"
+        >
+          <option selected value hidden></option>
+          <option
+            *ngFor="let item of selectOptions"
+            [ngValue]="item.id"
+            class="lands"
+          >
+            {{ item.name }}
+          </option>
+          <img src="assets/images/icons/dropdown.png" alt="" />
+        </select>
+        <label
+          for="landOfInterestId"
+          class="form__floating__text"
+          [ngClass]="{
+            'form__floating__text--floating': f['landOfInterestId'].value != ''
+          }"
+          >Terreno de interés (*)</label
+        >
+      </div>
+      <div class="form__item">
+        <textarea
+          cols="30"
+          rows="10"
+          class="form__input form__textarea"
+          [attr.disabled]="loading ? '' : null"
+          formControlName="message"
+          style="height: 100px"
+        ></textarea>
+        <label
+          for="message"
+          class="form__floating__text"
+          [ngClass]="{
+            'form__floating__text--floating': f['message'].value != ''
+          }"
+          >Mensaje</label
+        >
+      </div>
+      <div class="checkbox__container">
+        <div class="checkbox__content">
+          <div class="checkbox__item">
+            <input
+              type="checkbox"
+              id="checkbox__tyc"
+              formControlName="acceptedTOS"
+              [attr.disabled]="loading ? '' : null"
+            /><label
+              for="checkbox__tyc"
+              [ngClass]="{
+                'form__input--label--empty':
+                  isSubmitted && f.acceptedTOS.errors?.required
+              }"
+              >Acepto los
+              <a href="/terminos-y-condiciones" target="_blank"
+                >Términos y Condiciones(*)</a
+              >
+              y la
+              <a href="/politicas-de-privacidad" target="_blank"
+                >Política de Privacidad(*)</a
+              ></label
+            >
+          </div>
+          <div class="checkbox__item">
+            <input
+              type="checkbox"
+              id="checkbox__pp"
+              formControlName="acceptedPP"
+              [attr.disabled]="loading ? '' : null"
+            /><label
+              for="checkbox__pp"
+              [ngClass]="{
+                'form__input--label--empty':
+                  isSubmitted && f.acceptedPP.errors?.required
+              }"
+              >Acepto los
+              <a href="/fines-adicionales" target="_blank"
+                >Fines Adicionales (*)</a
+              ></label
+            >
+          </div>
+        </div>
+      </div>
+      <button class="button__main" (click)="submitForm()">
+        Enviar
+        <img src="assets/images/icons/arrow-button.svg" alt="" />
+      </button>
+    </div>
+  </form>
+</div>

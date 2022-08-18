@@ -1,0 +1,17 @@
+
+.padding_container {
+    padding: 1em 0;
+    text-align: center;
+    margin: auto;
+}
+h1{
+    color: white;
+}
+@media (max-width:767px){
+    .padding_container {
+        padding: 3em 0;
+        ::ng-deep .cta__content{
+            padding: 0px !important;
+        }
+    }
+}

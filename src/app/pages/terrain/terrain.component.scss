@@ -1,0 +1,48 @@
+.section_header {
+  background-color: #181d20;
+  height: 345px;
+}
+
+.infobox {
+  //   background: url('../../../assets/terrenos/san_antonio1/san-antonio-1_1.jpg');
+  padding: 2em 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgb(0 0 0 / 50%);
+  display: block;
+  top: 0px;
+  left: 0px;
+}
+app-terrain-info-card {
+  position: relative;
+}
+.filters {
+  padding-top: 56px;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .section_header {
+    height: 350px;
+  }
+  .filters {
+    padding-top: 80px;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .section_header {
+    height: 470px;
+  }
+  .filters {
+    padding-top: 150px;
+  }
+  .infobox {
+    padding: 0 0;
+    margin-top: 0px;
+  }
+}

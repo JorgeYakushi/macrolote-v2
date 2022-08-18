@@ -1,0 +1,32 @@
+.padding_container {
+  padding: 12em 0 2em;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width:1024px){
+  .padding_container{
+    padding: 13em 0 2em;
+    .column-1{
+      padding: 0px;
+      .container__info{
+        padding: 0 15px;
+      }
+    }
+  }
+}
+@media (max-width:767px){
+  .padding_container{
+    padding: 22em 0px 0px;
+    .container__info{
+      padding-bottom: 32px !important;
+    }
+    .button__main{
+      display: none;
+    }
+  }
+}
+@media (max-width:330px){
+  .padding_container{
+    padding: 27em 0px 0px;
+  }
+}

@@ -1,0 +1,36 @@
+.breadcrumbs{
+    padding: 17px 0 14px;
+    display: flex;
+    .prefix, .nameProject{
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+    }
+    .nameProject{
+        color: #0cd1b5;
+        margin-left: 5px;
+        font-weight: 800;
+    }
+}
+@media (max-width:1024px){
+    .breadcrumbs{
+        padding: 15px;
+    }
+}
+@media (max-width:767px){
+    .breadcrumbs{
+        padding: 15px;
+        .prefix{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.95;
+            letter-spacing: 0.25px;
+        }
+        .nameProject{
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.95;
+            letter-spacing: 0.25px;
+        }
+    }
+}

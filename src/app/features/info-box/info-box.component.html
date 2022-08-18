@@ -1,0 +1,34 @@
+<div class="cta__container">
+  <div class="cta__content" id="cta__items" #boxContainer>
+    <div class="cta__item">
+      <div class="cta__square green">
+        <p>+{{ counter1 | number: "1.0-0" }}</p>
+        <p class="cta__text">+91 años de experiencia</p>
+      </div>
+      <div class="cta__empty"></div>
+    </div>
+    <div class="cta__item">
+      <div class="cta__empty"></div>
+      <div class="cta__square black">
+        <p>{{ counter2 }}%</p>
+        <p class="cta__text">Terrenos 100% saneados</p>
+      </div>
+    </div>
+    <div class="cta__item">
+      <div class="cta__square green">
+        <p>
+          {{ counter3 | number: "2." }}<span>m<sup>2</sup></span>
+        </p>
+        <p class="cta__text">Terrenos desde 1,000 m<sup>2</sup></p>
+      </div>
+      <div class="cta__empty"></div>
+    </div>
+    <div class="cta__item">
+      <div class="cta__empty"></div>
+      <div class="cta__square black">
+        <p>{{ counter4 | number: "1.0-0" }}</p>
+        <p class="cta__text">Presencia en 8 regiones del Perú</p>
+      </div>
+    </div>
+  </div>
+</div>

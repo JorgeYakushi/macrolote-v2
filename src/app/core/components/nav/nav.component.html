@@ -1,0 +1,79 @@
+<nav class="animated fadeInDown" id="navbar">
+  <div class="container vw">
+    <div
+      class="nav__content"
+      [ngClass]="{ custom_1: dropdownCollapsed, custom_2: !dropdownCollapsed }"
+    >
+      <div class="nav__logo column-5">
+        <a href="/"><img src="assets/images/nav/logo.svg" alt="" /></a>
+      </div>
+      <div
+        class="nav__contact column-60 flex__center"
+        [ngClass]="{ show: dropdownCollapsed, hide: !dropdownCollapsed }"
+      >
+        <a
+          class="nav__item"
+          routerLink="/"
+          (click)="clickMenuItems()"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <a
+          class="nav__item"
+          routerLink="/terrenos"
+          (click)="clickMenuItems()"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Terrenos</a
+        >
+        <a
+          class="nav__item"
+          routerLink="/sobre-nosotros"
+          (click)="clickMenuItems()"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Quiénes somos</a
+        >
+        <a
+          class="nav__item"
+          routerLink="/contacto"
+          (click)="clickMenuItems()"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Contacto</a
+        >
+        <a
+          class="nav__item"
+          href="https://www.transparenciacentenario.com.pe/"
+          target="_blank"
+          >Transparencia Centenario</a
+        >
+      </div>
+      <div class="call__content">
+        <div class="nav__call">
+          <div class="dnone-responsive contact-numbers">
+            <p class="nav__number">Contacto:</p>
+            <a href="tel:+516169000" style="margin-left: 0"
+              ><u>01 616.9000</u></a
+            >/<a href="tel:+51948433581" style="margin-right: 0"
+              ><u>+51 948.433.581</u></a
+            >
+          </div>
+          <div class="nav__phone">
+            <img src="assets/images/nav/call.png" alt="" />
+          </div>
+        </div>
+        <button class="nav__hamburguer" (click)="toggleCollapsed()">
+          <span
+            [ngClass]="{
+              close: dropdownCollapsed,
+              hamburguer: !dropdownCollapsed
+            }"
+            alt=""
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

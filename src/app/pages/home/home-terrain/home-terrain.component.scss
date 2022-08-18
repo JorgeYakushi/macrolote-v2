@@ -1,0 +1,25 @@
+@import "../../../shared/styles/variables";
+.info__container__terrain {
+  .column-1{
+    margin-bottom: 40px;
+    padding: 10px;
+  }
+}   
+@media (max-width:1024px){
+  .info__container__terrain {
+    background-color: #f9f9f9;
+    .column-1{
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+  }
+}
+@media (max-width:767px){
+  .info__container__terrain {
+    padding-top: 31px;
+    .column-1{
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+  }
+}

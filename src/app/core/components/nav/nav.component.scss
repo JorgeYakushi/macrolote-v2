@@ -1,0 +1,311 @@
+@import "../../../shared/styles/variables";
+:host {
+  box-shadow: $shadow--main;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+}
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: $shadow--main;
+  z-index: 2;
+  .vw {
+    width: 100%;
+  }
+  .nav__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px;
+        object-fit: contain;
+      }
+    }
+    .nav__contact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 82%;
+      a {
+        padding: 0 20px;
+        font-weight: 500;
+        color: #19243b;
+        font-size: 13px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          margin: 0px 20px 0;
+          top: 10px;
+          width: 0%;
+          left: 0;
+          opacity: 0;
+          border-bottom: 3px solid $color--main;
+          transition: width 0.5s;
+        }
+        &:hover {
+          &::after {
+            margin: 10px 20px 0;
+            opacity: 1;
+            width: 50%;
+          }
+        }
+        &.active {
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            margin: 10px 0;
+            top: 10px;
+            width: 50%;
+            left: 25%;
+            opacity: 1;
+            border-bottom: 3px solid $color--main;
+            transition: width 0.5s;
+          }
+        }
+      }
+    }
+    .call__content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-width: 33%;
+      .nav__call {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        .contact-numbers {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        p {
+          width: 100%;
+          color: #000;
+          font-weight: 700;
+        }
+        a {
+          margin: 0 0.5rem;
+          color: #000;
+          u {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+        }
+
+        .nav__phone {
+          margin-left: 13px;
+          margin-right: 13px;
+          background-color: #000;
+          border-radius: 100px;
+          padding: 1px 2px;
+          img {
+            border-radius: 500px;
+            position: relative;
+            top: 1.5px;
+          }
+        }
+      }
+      .nav__hamburguer {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .nav__logo,
+  .call__content {
+    padding: 0 15px;
+    width: 100%;
+    z-index: 1;
+    min-width: initial !important;
+    .nav__hamburguer {
+      border: 0;
+      width: 44px;
+      height: 44px;
+      background-position: center;
+      display: block !important;
+      background-color: #0cd1b5;
+      margin-right: 0px;
+      .hamburguer {
+        background: url("../../../../assets/images/icons/hamburguer.svg")
+          no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 22px;
+        height: 16px;
+        margin: auto;
+        display: block;
+      }
+      .close {
+        width: 22px;
+        height: 18px;
+        background: url("../../../../assets/images/icons/close-nav.svg")
+          no-repeat;
+        background-position: center;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  .nav__contact {
+    flex-wrap: nowrap;
+    a {
+      padding: 0px 11px !important;
+      font-size: 12px !important;
+    }
+  }
+  .custom_1 {
+    height: 100vh;
+    background-color: #fff;
+    align-items: flex-start;
+    .nav__logo {
+      padding: 15px;
+    }
+    .call__content {
+      padding: 18px 15px;
+    }
+    .nav__contact {
+      flex-direction: column !important;
+      text-align: left;
+      position: absolute;
+      align-items: flex-start !important;
+      height: calc(100vh - 80px);
+      width: 100% !important;
+      padding: 0px 3px !important;
+      z-index: 1;
+      a {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        margin-bottom: 50px;
+        &::after {
+          left: 21% !important;
+          top: 20px !important;
+        }
+      }
+    }
+  }
+  .nav__content {
+    .nav__logo {
+      align-items: flex-start !important;
+    }
+    .show {
+      opacity: 1;
+      display: block;
+    }
+
+    .hide {
+      opacity: 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .nav__hamburguer {
+    border: 0;
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    display: block !important;
+    background-color: #0cd1b5;
+    margin-right: 0px;
+    .hamburguer {
+      background: url("../../../../assets/images/icons/hamburguer.svg")
+        no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 22px;
+      height: 16px;
+      margin: auto;
+      display: block;
+    }
+    .close {
+      width: 22px;
+      height: 18px;
+      background: url("../../../../assets/images/icons/close-nav.svg") no-repeat;
+      background-position: center;
+      display: block;
+      margin: auto;
+    }
+  }
+  nav {
+    height: 95px;
+  }
+  .nav__contact {
+    width: 0% !important;
+  }
+
+  .custom_1 {
+    height: 100vh;
+    background-color: #fff;
+    align-items: flex-start;
+    .nav__logo,
+    .call__content {
+      padding: 19.2px 15px;
+    }
+    .nav__contact {
+      text-align: left;
+      position: absolute;
+      height: 100vh;
+      width: 100% !important;
+      padding: 100px 3px 0px !important;
+
+      a {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        margin-bottom: 50px;
+        &::after {
+          left: 21% !important;
+          top: 20px !important;
+        }
+      }
+    }
+  }
+  .call__content {
+    z-index: 9;
+    display: flex;
+    align-items: flex-start !important;
+    margin-top: 10px;
+    .nav__call {
+      padding: 2.5px 0px;
+      img {
+        padding-top: 0px;
+      }
+    }
+  }
+  .nav__content {
+    .nav__logo {
+      align-items: flex-start !important;
+    }
+    .show {
+      opacity: 1;
+      display: block;
+    }
+
+    .hide {
+      opacity: 0;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .custom_1 {
+    .nav__contact {
+      justify-content: flex-end;
+      height: 100vh;
+      padding: 0px 3px !important;
+
+      a {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

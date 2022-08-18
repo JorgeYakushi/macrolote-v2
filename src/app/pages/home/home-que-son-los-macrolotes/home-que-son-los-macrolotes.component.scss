@@ -1,0 +1,30 @@
+.info__container {
+  padding: 4em;
+  text-align: center;
+  max-width: 1224px;
+  margin: auto;
+  position: relative;
+}
+.bg-picture {
+  // background: url('../../../../assets/terrenos/san_antonio2/san-antonio-2_1.jpg');
+  padding: 2em 0;
+  background-size: cover;
+  background-position: bottom;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgb(0 0 0 / 50%);
+  display: block;
+  top: 0px;
+  left: 0px;
+}
+@media (max-width: 767px) {
+  .info__container {
+    padding: 87px 15px;
+  }
+  .bg-picture {
+    padding: 0;
+  }
+}

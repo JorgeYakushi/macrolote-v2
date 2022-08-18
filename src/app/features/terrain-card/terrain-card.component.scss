@@ -1,0 +1,473 @@
+@import "../../shared/styles/variables";
+.ifSlider{
+    width: 100%;
+    .slider__container{
+        padding: 25px 25px 65px;
+        .slider__info{
+            position: relative;
+            box-shadow: 0px 11px 19px 0px rgb(0 0 0 / 8%);
+            background: #fff;
+            .bg-image{
+                position: relative;
+                height: 394px;
+                img{
+                    height: 394px;
+                    object-fit: cover;
+                    width: 100%;
+                }
+                .name-project{
+                    height: 70px;
+                    background-color: #d42e12;
+                    position: absolute;
+                    bottom: 0;
+                    width: 50%;  
+                    display: flex;
+                    align-items: center;
+                    padding: 0 1.5em;
+                    p{
+                        color: #fff;
+                    }
+                }
+            }
+            .info__list{
+                padding: 1.5em;
+                position: relative;
+                .info__item{
+                    display: flex;
+                    .info__image{
+                        margin-right: 20px;
+                        width: 26px;
+                    }
+                    .info__text{
+                        display: flex;
+                        .text__title{
+                            margin-right: 10px;
+                            color:rgb(25 36 59 / 70%);
+                            font-weight: normal;
+                            width: 83px;
+                            text-align: left;
+                        }
+                        p{
+                            color: #333333;
+                            font-weight: 600;
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .terrain__cta{
+                    position: absolute;
+                    top: 43%;
+                    right: 25px;
+                    a{
+                        color: #0cd1b5;
+                        display: flex;
+                        font-size: 13px;
+                        font-weight: 600;
+                        img{
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desktop__slider{
+        position: relative;
+        z-index: 1;
+        .slider__control--prev, .slider__control--next {
+            position: absolute;
+            top: -20px;
+        }
+        .slider__control--prev{
+            left: 40%;
+            transform: rotate(180deg) translateY(7px);
+            cursor: pointer;
+        }
+        .slider__control--next{
+            right: 40%;
+            cursor: pointer;
+        }
+    }
+    ::ng-deep .swiper-pagination-bullets{
+        bottom: -10px;
+        & .swiper-pagination-bullet{
+            width: 13px;
+            height: 13px;
+            background-color:#d0d7e0;
+            opacity: 1;
+        }
+        & .swiper-pagination-bullet-active{
+            background-color:#d42e12;
+            border: none !important;
+        }
+        & .swiper-pagination-bullet-first{
+            border: none !important;
+            margin: 0 !important;
+        }
+    
+    }
+    ::ng-deep .swiper-button-prev{
+        left: 0px !important;
+    }
+    ::ng-deep .swiper-button-next{
+        right: 0px !important;
+    }
+    ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+        width: 50px !important;
+        height: 50px !important;
+        background-color: #fff;
+        top: 32% !important;
+        color: black !important;
+    }
+    ::ng-deep .swiper-button-prev::after, ::ng-deep .swiper-button-next::after{
+        font-size: 24px;
+    }
+}
+
+.ifSliderIMG{
+    display: flex;
+    flex-wrap: wrap;
+    .slider__container{
+        padding: 22px 24px;
+    }
+    .slider__info{
+        position: relative;
+        box-shadow: 0px 11px 19px 0px rgb(0 0 0 / 8%);
+        background: #fff;
+        .bg-image{
+            height: 394px;
+            position: relative;
+            ::ng-deep .swiper-slide::after{
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    background: linear-gradient(
+                      0deg,
+                      rgb(0 0 0 / 90%) 0%,
+                      rgba(0, 0, 0, 0) 35%,
+                      rgb(0 0 0 / 0%) 0%
+                    );
+                    z-index: 1;
+                    display: block;
+                    top: 0px;
+                    left: 0px;
+                  }
+            img{
+                height: 394px;
+                object-fit: cover;
+                width: 100%;
+                display: block;
+            }
+            .name-project{
+                height: 70px;
+                background-color: #d42e12;
+                position: absolute;
+                bottom: 0;
+                width: 50%;  
+                display: flex;
+                align-items: center;
+                padding: 0 1.5em;
+                p{
+                    color: #fff;
+                }
+            }
+            .index-project{
+                position: absolute;
+                bottom: 20px;
+                right: 170px;
+                p{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+        }
+        .info__list{
+            padding: 1.5em;
+            position: relative;
+            .info__item{
+                display: flex;
+                .info__image{
+                    margin-right: 20px;
+                    width: 26px;
+                }
+                .info__text{
+                    display: flex;
+                    .text__title{
+                        margin-right: 10px;
+                        color:rgb(25 36 59 / 70%);
+                        font-weight: normal;
+                        width: 83px;
+                        text-align: left;
+                    }
+                    p{
+                        color: #333333;
+                        font-weight: 600;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .terrain__cta{
+                position: absolute;
+                top: 43%;
+                right: 25px;
+                a{
+                    color: #0cd1b5;
+                    display: flex;
+                    font-size: 13px;
+                    font-weight: 600;
+                    img{
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        
+    }
+    ::ng-deep .swiper-pagination-bullets{
+        bottom: -10px;
+        & .swiper-pagination-bullet{
+            width: 13px;
+            height: 13px;
+            background-color:#d0d7e0;
+            opacity: 1;
+        }
+        & .swiper-pagination-bullet-active{
+            background-color:#d42e12;
+            border: none !important;
+        }
+        & .swiper-pagination-bullet-first{
+            border: none !important;
+            margin: 0;
+        }
+    
+    }
+    ::ng-deep .swiper-button-prev{
+        left: 75%;
+    }
+    ::ng-deep .swiper-button-next{
+        right: 3%;
+    }
+    ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        top: 90%;
+        color: black;
+    }
+    ::ng-deep .swiper-button-prev::after, ::ng-deep .swiper-button-next::after{
+        font-size: 24px;
+    }
+}
+@media (max-width:1024px){
+    .ifSlider{
+        .desktop__slider{
+            .slider__control--prev{
+            left: 35%;
+            }
+            .slider__control--next{
+            right: 35%;
+            }
+        }
+        ::ng-deep .swiper-pagination-bullets{
+            bottom: -12px;
+        }
+    }
+    .ifSliderIMG{
+        ::ng-deep .swiper-button-prev{
+            left: 83%;
+        }
+        ::ng-deep .swiper-button-next{
+            right: 2%;
+        }
+        ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+            top: 89%;
+        }
+    }
+}
+@media (max-width:767px){
+    .ifSlider{
+        .slider__container{
+            padding: 25px 15px 65px;
+            .slider__info{
+                .bg-image{
+                    height: 50vw;
+                    img{
+                        height: 50vw;
+                    }
+                    .name-project{
+                        height: 60px; 
+                        width: 70%;
+                    }
+                }
+                .info__list{
+                    .info__item{
+                        margin-bottom: 12px;
+                        .info__text{
+                            display: block;
+                            text-align: left;
+                        }
+                        .text__title{
+                            margin-right: 0px;
+                        }                    
+                    }
+                    .terrain__cta{
+                        position: relative;
+                        padding: 12px 1.5em 0 ;
+                    }
+                }
+            }
+        }
+        .desktop__slider{
+            .slider__control--prev{
+            left: 20%;
+            }
+            .slider__control--next{
+            right: 20%;
+            }
+        }
+        ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+            display: none;
+        }
+
+    }
+    .ifSliderIMG{
+        display: block;
+        .slider__container{
+            padding: 25px 15px 0px;
+            .slider__info{
+                .bg-image{
+                    height: 50vw;
+                    img{
+                        height: 50vw;
+                    }
+                    .name-project{
+                        height: 60px; 
+                        width: 70%;
+                    }
+                    
+                    .index-project{
+                        position: absolute;
+                        bottom: 20px;
+                        right: 18px;
+                        p{
+                            font-size: 13px;
+                            font-weight: bold;
+                            color: #fff;
+                        }
+                    }
+                    .name-project{
+                        height: 60px; 
+                        width: 70%;
+                    }
+                    .index-project{
+                        position: absolute;
+                        bottom: 20px;
+                        right: 30px;
+                        p{
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #fff;
+                        }
+                    }
+                }
+                .info__list{
+                    padding: 1.5em;
+                    position: relative;
+                    .info__item{
+                        margin-bottom: 12px;
+                        .info__text{
+                            display: block;
+                            text-align: left;
+                        }
+                        .text__title{
+                            margin-right: 0px;
+                        }                    
+                    }
+                    .terrain__cta{
+                        position: relative;
+                        padding: 12px 1.5em 0 ;
+                    }
+                    .info__list{
+                        .info__item{
+                            margin-bottom: 12px;
+                            .info__text{
+                                display: block;
+                                text-align: left;
+                            }
+                            .text__title{
+                                margin-right: 0px;
+                            }                    
+                        }
+                        .terrain__cta{
+                            position: relative;
+                            padding: 12px 1.5em 0 ;
+                        }
+                    }
+                }
+            }
+        }
+        ::ng-deep .swiper-pagination-bullets{
+            bottom: -10px;
+            & .swiper-pagination-bullet{
+                width: 13px;
+                height: 13px;
+                background-color:#d0d7e0;
+                opacity: 1;
+            }
+            & .swiper-pagination-bullet-active{
+                background-color:#d42e12;
+                border: none !important;
+            }
+            & .swiper-pagination-bullet-first{
+                border: none !important;
+                margin: 0;
+            }
+        
+        }
+        ::ng-deep .swiper-button-prev{
+            left: 0px;
+        }
+        ::ng-deep .swiper-button-next{
+            right: 0px;
+        }
+        ::ng-deep .swiper-button-prev, ::ng-deep .swiper-button-next{
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 45%;
+            color: black;  
+        }
+        ::ng-deep .swiper-button-prev::after, ::ng-deep .swiper-button-next::after{
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width:330px){
+    .ifSlider{
+        .slider__container{
+            padding: 25px 15px 0px;
+            .slider__info{
+                .bg-image{
+                    height: 70vw;
+                    img{
+                        height: 70vw;
+                    }
+                }
+            }
+        }
+    }
+    .ifSliderIMG{
+        .slider__container{
+            .slider__info{
+                .bg-image{
+                    height: 50vw;
+                    img{
+                        max-height: 50vw;
+                    }
+                }
+            }
+        }
+    }
+}

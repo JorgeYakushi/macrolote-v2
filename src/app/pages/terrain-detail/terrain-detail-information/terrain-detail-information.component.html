@@ -1,0 +1,42 @@
+<div class="container-fullwidth padding-container">
+  <div class="column-2 red">
+    <div class="container-box">
+      <h3 class="title">Macrolotes ideales en {{ terrainData.name }}</h3>
+      <p class="subtitle">Invierte con seguridad</p>
+      <p>{{ terrainData.description.texto }}</p>
+      <div class="cta__container">
+        <div class="cta__content" id="cta__items">
+          <div class="cta__item">
+            <div class="cta__square green">
+              <img src="assets/images/icons/area-terreno-metros.svg" alt="" />
+              <p>Área total: {{ terrainData.description.area }} m²</p>
+            </div>
+          </div>
+          <div class="cta__item">
+            <div class="cta__square black">
+              <img src="assets/images/icons/area-terreno.svg" alt="" />
+              <p>Lotes desde {{ terrainData.description.desde }} m²</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column-2">
+    <div class="container-video">
+      <video
+        width="100%"
+        height="100%"
+        poster="../../../../assets/video/preview_video.jpg"
+        loop
+        playsinline
+        controls
+      >
+        <source
+          [src]="blobUrl + '/terrenos/' + terrainData.video"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </div>
+</div>

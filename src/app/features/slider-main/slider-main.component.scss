@@ -1,0 +1,99 @@
+@import "../../shared/styles/variables";
+.slider__container {
+  position: relative;
+  // overflow: hidden;
+  height: 100%;
+  .carousel__image__container {
+    > img {
+      height: calc(100vh - 80px);
+      width: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      height: calc(100vh - 80px);
+      width: 100%;
+      position: absolute;
+      background: linear-gradient(
+        0deg,
+        rgb(0 0 0 / 90%) 0%,
+        rgba(0, 0, 0, 0) 35%,
+        rgb(0 0 0 / 0%) 0%
+      );
+      z-index: 1;
+      display: block;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  ::ng-deep .swiper-button-next,
+  ::ng-deep .swiper-button-prev {
+    top: 96%;
+    height: 17px;
+    width: 7px;
+    color: #d42e12;
+  }
+  ::ng-deep .swiper-pagination-bullets {
+    bottom: 3.2%;
+    z-index: 999;
+    & .swiper-pagination-bullet-first {
+      border: none !important;
+      margin: 0 !important;
+    }
+  }
+  ::ng-deep .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    background-color: #ebecef;
+    opacity: 1;
+  }
+  ::ng-deep .swiper-pagination-bullet-active,
+  .swiper-pagination-bullet-first {
+    background-color: #d42e12;
+    margin: 0 !important;
+    border: none !important;
+  }
+  ::ng-deep .swiper-button-next::after,
+  ::ng-deep .swiper-button-prev::after {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  ::ng-deep .swiper-button-prev {
+    left: 42%;
+  }
+  ::ng-deep .swiper-button-next {
+    right: 42%;
+  }
+}
+@media (max-width: 1024px) {
+  .slider__container {
+    ::ng-deep .swiper-pagination-bullets {
+      bottom: 3.4%;
+    }
+    ::ng-deep .swiper-button-prev {
+      left: 37%;
+    }
+    ::ng-deep .swiper-button-next {
+      right: 37%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .slider__container {
+    height: calc(100vh - 95px);
+    .carousel__image__container {
+      > img {
+        height: calc(100vh - 95px);
+      }
+      &::after {
+        height: calc(100vh - 95px);
+      }
+    }
+    ::ng-deep .swiper-button-prev {
+      left: 30%;
+    }
+    ::ng-deep .swiper-button-next {
+      right: 30%;
+    }
+  }
+}

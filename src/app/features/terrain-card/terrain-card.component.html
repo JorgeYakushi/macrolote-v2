@@ -1,0 +1,145 @@
+<div *ngIf="ifSlider" class="ifSlider">
+  <swiper fxFlex="auto" [config]="configSlider" [index]="index" #projectSwiper>
+    <div *ngFor="let item of terrains; let i = index" class="slider__container">
+      <div class="slider__info">
+        <div class="bg-image">
+          <img [src]="blobUrl + '/terrenos/' + item.imagenes[0]" alt="" />
+          <div class="name-project">
+            <p>{{ item.name }}</p>
+          </div>
+        </div>
+        <div class="info__list">
+          <div class="info__item">
+            <div class="info__image">
+              <img src="../../../assets/images/icons/location.svg" alt="" />
+            </div>
+            <div class="info__text">
+              <p class="text__title">Dirección:</p>
+              <p>{{ item.description.direccion }}</p>
+            </div>
+          </div>
+          <div class="info__item">
+            <div class="info__image">
+              <img
+                [src]="
+                  '../../../assets/images/icons/' + item.description.tipoZona
+                "
+                alt=""
+              />
+            </div>
+            <div class="info__text">
+              <p class="text__title">Zonificación:</p>
+              <p>{{ item.description.zonificacion }}</p>
+            </div>
+          </div>
+          <div class="info__item">
+            <div class="info__image">
+              <img src="../../../assets/images/icons/desde.svg" alt="" />
+            </div>
+            <div class="info__text">
+              <p class="text__title">Desde:</p>
+              <p>{{ item.description.desde }} m<sup>2</sup></p>
+            </div>
+          </div>
+          <div class="terrain__cta">
+            <a [href]="'/terrenos/' + item.route"
+              >Más detalle
+              <img
+                src="../../../assets/images/icons/arrow-turquoise.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </swiper>
+  <div class="desktop__slider">
+    <div class="slider__control slider__control--prev">
+      <img
+        class="carousel__control--prev"
+        (click)="prevSlide()"
+        src="assets/images/icons/arrow-black.svg"
+        alt=""
+      />
+    </div>
+    <div class="slider__control slider__control--next">
+      <img
+        class="carousel__control--next"
+        (click)="nextSlide()"
+        src="assets/images/icons/arrow-black.svg"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div *ngIf="ifSliderIMG" class="ifSliderIMG">
+  <div
+    class="slider__container column-2"
+    *ngFor="let item of terrains; let j = index"
+  >
+    <div class="slider__info">
+      <div class="bg-image">
+        <swiper
+          fxFlex="auto"
+          [config]="configSliderIMG"
+          [index]="indexGroup[j]"
+          (indexChange)="indexChange($event, j)"
+          #projectIMGSwiper
+          ><div *ngFor="let img of item.imagenes" class="swiper-slide">
+            <img [src]="blobUrl + '/terrenos/' + img" alt="" />
+          </div>
+        </swiper>
+        <div class="name-project z-index1">
+          <p>{{ item.name }}</p>
+        </div>
+
+        <div class="index-project z-index1">
+          <p *ngIf="item.imagenes.length > 1">
+            {{ indexGroup[j] + 1 }} / {{ item.imagenes.length }}
+          </p>
+        </div>
+      </div>
+      <div class="info__list">
+        <div class="info__item">
+          <div class="info__image">
+            <img src="../../../assets/images/icons/location.svg" alt="" />
+          </div>
+          <div class="info__text">
+            <p class="text__title">Dirección:</p>
+            <p>{{ item.description.direccion }}</p>
+          </div>
+        </div>
+        <div class="info__item">
+          <div class="info__image">
+            <img
+              [src]="
+                '../../../assets/images/icons/' + item.description.tipoZona
+              "
+              alt=""
+            />
+          </div>
+          <div class="info__text">
+            <p class="text__title">Zonificación:</p>
+            <p>{{ item.description.zonificacion }}</p>
+          </div>
+        </div>
+        <div class="info__item">
+          <div class="info__image">
+            <img src="../../../assets/images/icons/desde.svg" alt="" />
+          </div>
+          <div class="info__text">
+            <p class="text__title">Desde:</p>
+            <p>{{ item.description.desde }} m<sup>2</sup></p>
+          </div>
+        </div>
+        <div class="terrain__cta">
+          <a [href]="'/terrenos/' + item.route">
+            Más detalle
+            <img src="../../../assets/images/icons/arrow-turquoise.svg" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

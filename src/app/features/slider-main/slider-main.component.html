@@ -1,0 +1,24 @@
+<div class="slider__container">
+  <swiper
+    fxFlex="auto"
+    [config]="config"
+    (indexChange)="swiperIndexChange($event)"
+    [index]="index"
+    #terrainsSwiper
+  >
+    <div
+      *ngFor="let item of slideHome; let i = index"
+      class="swiper-slide cursor-pointer"
+    >
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+        <div class="carousel__image__container p-absolute">
+          <img
+            class="carousel__image__slide"
+            [src]="blobUrl + '/terrenos/' + item.url"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </swiper>
+</div>

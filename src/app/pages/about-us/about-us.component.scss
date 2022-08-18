@@ -1,0 +1,15 @@
+.section_header{
+    background-color: #181d20;
+    height: 345px;
+}
+@media (max-width: 1024px) {
+    .section_header{
+        height: 350px;
+        background-position: top center;
+    }
+}
+@media (max-width: 767px) {
+    .section_header{
+        height: 470px;
+    }
+}
